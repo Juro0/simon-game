@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+
+    /* COLORS */
+    --clr-1: rgb(56, 237, 56);
+    --clr-2: rgb(237, 56, 56);
+    --clr-3: rgb(231, 237, 56);
+    --clr-4: rgb(56, 56, 237);
+    --clr-white: #ffeeff;
+    --clr-white-op: rgba(255, 255, 255, .7);
+
+    /* FONTS */
+    --fnt-space: 'Space Grotesk', sans-serif;
+
+    /* WEIGHT */
+    --wgt-bold: 700;
+    --wgt-semi: 600;
+    --wgt-medium: 500;
+    --wgt-regular: 400;
+
+}
+
+/* KEYFRAMES */
+
+@keyframes backgroundAnimation {
+    0% {background: rgba(84, 160, 255, .6)}
+    20% {background: rgba(29, 209, 161, .6)}
+    40% {background: rgba(95, 39, 205, .6)}
+    60% {background: rgba(255, 107, 107, .6)}
+    80% {background: rgba(254, 202, 87, .6)}
+    100% {background: rgba(84, 160, 255, .6)}
+}
+
+/* GENERAL */
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    font-family: var(--fnt-space);
+    font-weight: var(--wgt-regular);
+    background: #272727;
+    /* animation: backgroundAnimation 30s linear infinite; */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .2s ease;
+}
+
+*::selection {
+    background: none;
+}
+
+.hide {
+    display: none;
+}
+
+/* TITLES */
+
+.title, .level {
+    color: var(--clr-white);
+    font-weight: var(--wgt-bold);
+    width: 100%;
+    text-align: center;
+    margin: 1.3rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.level {
+    opacity: .9;
+}
+
+/* GAME */
+
+.game {
+    position: absolute;
+    top: 13rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 27rem;
+    height: 27rem;
+    text-align: center;
+}
+
+.simon {
+    width: 44%;
+    height: 43%;
+    margin: 2.75%;
+    border-radius: 200rem;
+    border: solid 3px black;
+    cursor: pointer;
+    opacity: .7;
+}
+
+.simon.press {
+    opacity: 1;
+}
+
+.simon.clicked {
+    transform: scale(105%);
+    opacity: 1;
+}
+
+#a {background: var(--clr-1)}
+#b {background: var(--clr-2)}
+#c {background: var(--clr-3)}
+#d {background: var(--clr-4)}
+
+/* DEBUG */
+
+.debug-win {
+    background: var(--clr-white-op);
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 20rem;
+    height: 70%;
+    border-radius: 0 1rem 1rem 0;
+    transform: translateX(-100%);
+}
+
+.debug-buttons {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.debug-btn {
+    width: 80%;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 2px solid black;
+    background:var(--clr-white);
+    cursor: pointer;
+}
+
+#debug-output {
+    height: 20%;
+    width: 100%;
+    padding: 5% 5%;
+    text-align: center;
+}
+
+.debug-on {
+    transform: translateX(0);
+}

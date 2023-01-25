@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>simon game &bull; juri gemignani</title>
+        <link rel="shortcut icon" href="assets/img/favicon-path" type="image/x-icon">
+    
+        <link rel="stylesheet" href="assets/css/style-lg.css">
+        <link rel="stylesheet" href="assets/css/style-sm.css" media="screen and (max-width: 768px)">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
+    </head>
+
+    <body>
+        
+        <p class="title">Simon Game</p>
+        <p class="level">click to start...</p>
+
+        <div class="game">
+
+            <button id="a" class="simon"></button>
+            <button id="b" class="simon"></button>
+            <button id="c" class="simon"></button>
+            <button id="d" class="simon"></button>
+
+        </div>
+
+        <div class="debug-win">
+            <div class="debug-buttons">
+                <button class="debug-btn" id="1">show right combinations</button>
+                <button class="debug-btn" id="2">show right move</button>
+                <button class="debug-btn" id="3">add a new move</button>
+                <button class="debug-btn" id="4">show all moves animation</button>
+                <button class="debug-btn" id="5">reset the moves</button>
+                <button class="debug-btn" id="6">reset the turn</button>
+            </div>
+            <p id="debug-output">...</p>
+        </div>
+        
+        <audio src="assets/sound/green.mp3" id="green"></audio>
+        <audio src="assets/sound/red.mp3" id="red"></audio>
+        <audio src="assets/sound/yellow.mp3" id="yellow"></audio>
+        <audio src="assets/sound/blue.mp3" id="blue"></audio>
+        <audio src="assets/sound/error.mp3" id="error"></audio>
+        <audio src="assets/sound/intro.mp3" id="intro"></audio>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="assets/js/script.js"></script>
+        
+    </body>
+
+</html>
